@@ -10,8 +10,8 @@ import time
 import html
 from urllib.parse import urljoin
 
-MFPLINK = "LINKMFP"
-MFPPSW = "MFPPSW"
+MFPLINK = "https://mam.lokiale.duckdns.org"
+#MFPPSW = "MFPPSW"
 # Funzioni dal tuo mpd_decoder.py
 def extract_mpd_link_from_page(url):
     """Estrae il link MPD da una pagina HTML che contiene un iframe con player.html#"""
@@ -71,8 +71,8 @@ def generate_proxy_url(mpd_link, key1, key2, api_password=f"{MFPPSW}"):
     encoded_link = urllib.parse.quote(mpd_base)
     
     # Costruisci l'URL proxy completo
-    proxy_url = f"{base_url}?d={encoded_link}&key_id={key1}&key={key2}&api_password={api_password}"
-    
+    #proxy_url = f"{base_url}?d={encoded_link}&key_id={key1}&key={key2}&api_password={api_password}"
+    proxy_url = f"{base_url}?d={encoded_link}&key_id={key1}&key={key2}"
     return proxy_url
 
 def process_mpd_url(mpd_url):
