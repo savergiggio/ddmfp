@@ -9,8 +9,8 @@ import requests
 from bs4 import BeautifulSoup
 import time
 
-MFPLINK = ""     # non mettere lo / finale al link
-MFPPSW = ""
+MFPLINK = "https://mam.lokiale.duckdns.org"     # non mettere lo / finale al link
+MFPPSW = "Digimon96.."
 
 # Costanti
 NUM_CHANNELS = 10000
